@@ -1,9 +1,9 @@
-const menuHamburger = document.querySelector(".menu-hamburger")
-const navLinks = document.querySelector(".nav-links")
+const menuHamburger = document.querySelector(".menu-hamburger");
+const navLinks = document.querySelector(".nav-links");
 
     menuHamburger.addEventListener('click', ()=> {
-    navLinks.classList.toggle('mobile-menu')
-    })
+        navLinks.classList.toggle('mobile-menu');
+    });
 
 
 let sections = document.querySelectorAll('section');
@@ -19,6 +19,7 @@ window.onscroll = () => {
         if(top >= offset && top < offset + height) {
             navLink.forEach(links => {
                 links.classList.remove('active');
+                navLinks.classList.remove('mobile-menu');
                 document.querySelector('.nav-links ul li a[href*=' + id + ']').classList.add('active');
             });
         };
