@@ -3,6 +3,7 @@ const navLinks = document.querySelector(".nav-links");
 const switchThemeBtn = document.querySelector('.changeTheme');
 const toggleDark = document.getElementById('toggleDark');
 
+
 /* Mobile Menu */
 
     menuHamburger.addEventListener('click', ()=> {
@@ -12,7 +13,7 @@ const toggleDark = document.getElementById('toggleDark');
 
 /* Change Theme */
 
-    /* A: Color */
+    /* A: Change Color */
 
 let toggleTheme = 0;
 
@@ -22,12 +23,12 @@ switchThemeBtn.addEventListener('click', () => {
 
         document.documentElement.style.setProperty('--bleu1', '#ff0000');
         document.documentElement.style.setProperty('--bleu2', '#808080');
-        document.documentElement.style.setProperty('--bleu3', '#000000');
+        document.documentElement.style.setProperty('--bleu3', '#a9a9a9');
         toggleTheme++;
 
     } else {
 
-        document.documentElement.style.setProperty('--bleu1', '#0ef');
+        document.documentElement.style.setProperty('--bleu1', '#00eeff');
         document.documentElement.style.setProperty('--bleu2', '#1f242d');
         document.documentElement.style.setProperty('--bleu3', '#323946');
         toggleTheme--;
@@ -35,11 +36,12 @@ switchThemeBtn.addEventListener('click', () => {
 
 })
 
-    /* B: icons */
+    /* B: Change icon */
 
 toggleDark.addEventListener('click', function() {
     this.classList.toggle('bi-moon-stars-fill');
 })
+
 
 /* Navbar Active Link On Scroll */
 

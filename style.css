@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --bleu1: #0ef;
+    --bleu1: #00eeff;
     --bleu2: #1f242d;
     --bleu3: #323946;
     --blanc: #ffffff;
-
-    --bleu1s: #808080;
 }
 
 * {
@@ -65,7 +63,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--bleu2);
+    background: var(--bleu3);
     font-size: 100px;
     color: var(--blanc);
     font-weight: 700;
@@ -82,7 +80,7 @@ section {
     /* E: Contact */
 
 section:nth-child(odd) {
-    background: var(--bleu3);
+    background: var(--bleu2);
 }
 
 /* Mobile Menu */
