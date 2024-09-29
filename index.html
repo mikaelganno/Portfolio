@@ -20,7 +20,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>              
                 <li><a href="#contact">Contact</a></li>
-                <li class="changeTheme"><i class="bi bi-brightness-high-fill" id="toggleDark"></i></li>
+                <li class="changeTheme" style="color: var(--noir);"><i class="bi bi-brightness-high-fill" id="toggleDark"></i></li>
             </ul>
         </div>
         <img src="img/menu hamburger.png" alt="menu hamburger" class="menu-hamburger">
@@ -30,9 +30,75 @@
     <section id="about">About</section>
     <section id="services">Services</section>
     <section id="portfolio">Portfolio</section>
-    <section id="contact">Contact</section>
+    <section id="contact">
+        <div class="container">
+            <p>Contact Me</p>
+            <div class="container-title">
+                <p style="color: var(--bleu1);">Have You Any Questions ?</p>
+                <p>I'M AT YOUR SERVICE</p>
+            </div>
+            <div class="container-head">
+                <table class="container-head-table">
+                    <thead>
+                        <tr style="color: var(--bleu1);">
+                            <th><i class="bi bi-telephone-fill"></i></th>
+                            <th><i class="bi bi-envelope-fill"></i></th>
+                            <th><i class="bi bi-whatsapp"></i></th>
+                            <th><i class="bi bi-geo-alt-fill"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Call Me On</td>
+                            <td>Email</td>
+                            <td>WhatsApp</td>
+                            <td>Location</td>
+                        </tr>
+                        <tr>
+                            <td>+237 658853611</td>
+                            <td>Leakimganno@gmail.com</td>
+                            <td>+237 658853611</td>
+                            <td>Douala-Cameroun</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="container-head-end">
+                    <p style="color: var(--bleu1);">SEND ME AN EMAIL</p>
+                    <p>I'M VERY RESPONSIVE TO MESSAGES</p>
+                </div>
+            </div>
+            <div class="container-body">
+                <form action="#">
+                    <div class="input-box">
+                        <div class="input-field field">
+                            <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                            <div class="error-txt">Full Name can't be blank</div>
+                        </div>
+                        <div class="input-field field">
+                            <input type="text" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                            <div class="error-txt email">Email Address can't be blank</div>
+                        </div>
+                    </div>
+                 
+                    <div class="input-field field">
+                        <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                        <div class="error-txt">Subject can't be blank</div>
+                    </div>
+                    
+                    <div class="textarea-field field">
+                        <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+                        <div class="error-txt">Message can't be blank</div>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
     
-    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
 </body>
 </html>
+

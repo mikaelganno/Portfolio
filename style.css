@@ -5,6 +5,7 @@
     --bleu2: #1f242d;
     --bleu3: #323946;
     --blanc: #ffffff;
+    --noir: #000000;
 }
 
 * {
@@ -21,7 +22,7 @@ body {
 
 .navbar {
     position: fixed;
-    padding: 20px 15px 15px 30px;
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,7 +57,7 @@ ul a.active {
     font-weight: 600;
 }
 
-/* Section */
+/* ==== Section ==== */
 
 section {
     min-height: 100vh;
@@ -69,21 +70,162 @@ section {
     font-weight: 700;
 }
 
-    /* A: Home */
-
-    /* B: About */
-
-    /* C: Services */
-
-    /* D: Project */
-
-    /* E: Contact */
-
 section:nth-child(odd) {
     background: var(--bleu2);
 }
 
-/* Mobile Menu */
+    /* ==== A: Home ==== */
+
+    /* ==== B: About ==== */
+
+    /* ==== C: Services ==== */
+
+    /* == D: Project ==== */
+
+    /* ==== E: Contact ==== */
+
+    section#contact .container {
+        height: 160vh;
+        width: 100vw;
+        padding: 120px 20px 20px;
+    }
+
+    section#contact .container p {
+        font-size: 0.5em;
+    }
+
+    section#contact .container .container-title {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7em;
+    }
+
+    section#contact .container .container-title p {
+        padding: 10px;
+    }
+
+    section#contact .container .container-title p:nth-child(2) {
+        padding-left: 23%;
+        font-size: 0.3em;
+    }
+    section#contact .container .container-head {
+        display: grid;
+        margin: 40px;
+    }
+
+    section#contact .container .container-head .container-head-table {
+        font-size: 20px;
+        padding-bottom: 50px;
+    }
+
+    section#contact .container .container-head .container-head-table tr {
+        text-align: center;
+    }
+
+    section#contact .container .container-head .container-head-end {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.6em;
+    }
+
+    section#contact .container .container-head .container-head-end p {
+        padding: 10px;
+    }
+
+    section#contact .container .container-head .container-head-end p:first-child {
+        padding-left: 8.5%;
+    }
+
+    section#contact .container .container-head .container-head-end p:nth-child(2) {
+        font-size: 0.3em;
+    }
+
+    .container .container-body {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .container .container-body form {
+        width: 93vw;
+        text-align: center;
+    }
+
+    .container .container-body form .input-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    form .input-box .input-field {
+        width: 38.5%;
+    }
+
+    .field .item {
+        width: 100%;
+        padding: 18px;
+        background: transparent;
+        border: 2px solid var(--bleu1);
+        outline: none;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #ededed;
+        margin: 12px 0px;
+    }
+
+    .field.error .item {
+        border-color: #d93025;
+    }
+
+    .field .item::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .field .error-txt {
+        font-size: 14.5px;
+        color: #d93025;
+        text-align: left;
+        margin: -5px 0 10px;
+        display: none;
+    }
+
+    .field.error .error-txt {
+        display: block;
+    }
+
+    form .textarea-field .item {
+        resize: none;
+    }
+
+    form .textarea-field .error-txt {
+        margin-top: -10px;
+    }
+
+    form button {
+        padding: 12px 32px;
+        background: var(--bleu1);
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        box-shadow: 0 0 10px var(--bleu1);
+        font-size: 16px;
+        color: #333;
+        letter-spacing: 1px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: .5s;
+    }
+
+    form button:hover {
+        box-shadow: none;
+    }
+
+
+
+
+/* ==== Mobile Menu ==== */
 
 .navbar .menu-hamburger {
     display: none;
@@ -97,7 +239,7 @@ section:nth-child(odd) {
     margin-left: 0;
 }
 
-/* Change Theme */
+/* ==== Change Theme ==== */
 
 .changeTheme {
     cursor: pointer;
@@ -107,7 +249,7 @@ section:nth-child(odd) {
     font-size: 1.2em;
 }
 
-/* Media Queries */
+/* ==== Media Queries ==== */
 
 @media screen and (max-width: 900px) {
 
