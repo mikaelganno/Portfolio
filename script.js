@@ -2,6 +2,10 @@ const menuHamburger = document.querySelector(".menu-hamburger");
 const navLinks = document.querySelector(".nav-links");
 const switchThemeBtn = document.querySelector('.changeTheme');
 const toggleDark = document.getElementById('toggleDark');
+const changeColorBtn = document.getElementById('changeColor');
+const switchColorBtn = document.querySelector("#switchColor");
+const paint = document.querySelectorAll("#switchColor i");
+const spans = document.querySelectorAll('.progress-bar span');
 const form = document.querySelector('form');
 const fullName = document.getElementById("name");
 const email = document.getElementById("email");
@@ -11,7 +15,7 @@ const mess = document.getElementById("message");
 
 /* ==== Mobile Menu ==== */
 
-    menuHamburger.addEventListener('click', ()=> {
+    menuHamburger.addEventListener('click', () => {
         navLinks.classList.toggle('mobile-menu');
     });
 
@@ -21,27 +25,38 @@ const mess = document.getElementById("message");
     /* ==== A: Change Color ==== */
 
     let toggleTheme = 0;
+    
+
+    changeColorBtn.addEventListener("click", () => {
+        switchColorBtn.classList.toggle('MobileSC');
+    });
 
     switchThemeBtn.addEventListener('click', () => {
 
         if(toggleTheme === 0) {
 
-            document.documentElement.style.setProperty('--bleu1', '#ff0000');
-            document.documentElement.style.setProperty('--bleu2', '#000000');
-            document.documentElement.style.setProperty('--bleu3', '#000000');
-            document.documentElement.style.setProperty('--noir', '#ffffff')
+            document.documentElement.style.setProperty('--blue', '#ff0000');
+            document.documentElement.style.setProperty('--black', '#ffffff');
+            document.documentElement.style.setProperty('--white', '#000000');
+            document.documentElement.style.setProperty('--bluegrad1', 'rgb(255, 0, 0, 1)');
+            document.documentElement.style.setProperty('--bluegrad2', 'rgb(245, 59, 2, 1)')
             toggleTheme++;
 
         } else {
 
-            document.documentElement.style.setProperty('--bleu1', '#00eeff');
-            document.documentElement.style.setProperty('--bleu2', '#1f242d');
-            document.documentElement.style.setProperty('--bleu3', '#323946');
-            document.documentElement.style.setProperty('--noir', '#000000')
+            document.documentElement.style.setProperty('--blue', '#00eeff');
+            document.documentElement.style.setProperty('--black', '#000000');
+            document.documentElement.style.setProperty('--white', '#ffffff');
+            document.documentElement.style.setProperty('--bluegrad1', 'rgb(0, 238, 255, 1)');
+            document.documentElement.style.setProperty('--bluegrad2', 'rgb(4, 255, 255, 1)')
             toggleTheme--;
         }
 
     })
+
+    //paint.addEventListener('click', () => {
+    //    forEach
+    //})
 
     /* ==== B: Change icon ==== */
 
@@ -71,6 +86,13 @@ window.onscroll = () => {
         };
     });
 };
+
+/* ==== Progress Bar ==== */
+
+spans.forEach((span) => {
+    span.style.width = span.dataset.width;
+    span.innerHTML = span.dataset.width;
+})
 
 /* ==== Send Email ==== */
 

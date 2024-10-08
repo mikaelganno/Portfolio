@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --bleu1: #00eeff;
-    --bleu2: #1f242d;
-    --bleu3: #323946;
-    --blanc: #ffffff;
-    --noir: #000000;
+    --blue: #00eeff;
+    --white: #ffffff;
+    --black: #000000;
+    --bluegrad1: rgb(0, 238, 255, 1);
+    --bluegrad2: rgb(4, 255, 255, 1);
+    color: rgb(245, 59, 2, 1);
 }
 
 * {
@@ -31,7 +32,7 @@ body {
 }
 
 .navbar a {
-    color: var(--blanc);
+    color: var(--black);
 }
 
 .navbar .logo {
@@ -53,8 +54,38 @@ ul li a {
 
 ul a:hover,
 ul a.active {
-    color: var(--bleu1);
+    color: var(--blue);
     font-weight: 600;
+}
+
+/* ==== Change Theme ==== */
+
+#toggleDark,
+#changeColor {
+    cursor: pointer;
+    color: var(--black);
+}
+
+.navbar .nav-links .switchColor {
+    display: none;
+}
+
+.navbar .nav-links .switchColor i {
+    padding: 5px;
+}
+
+.MobileSC {
+    display: none;
+}
+
+.navbar .nav-links .switchColor.MobileSC {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: transparent;
+    width: auto;
+    border: solid 2px #ededed;
+    border-radius: 60px;
 }
 
 /* ==== Section ==== */
@@ -64,151 +95,69 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--bleu3);
-    font-size: 100px;
-    color: var(--blanc);
+    background: var(--white);
+    color: var(--black);
     font-weight: 700;
 }
 
 section:nth-child(odd) {
-    background: var(--bleu2);
+    background: var(--white);
 }
+
+.container {
+    height: 160vh;
+    width: 100vw;
+    padding: 120px 20px 20px;
+}
+
+.container h1 {
+    font-size: 2.5em;
+}
+
+.container strong {
+    color: var(--blue);
+}
+
 
     /* ==== A: Home ==== */
 
     /* ==== B: About ==== */
 
-    /* ==== C: Services ==== */
-
-    /* == D: Project ==== */
-
-    /* ==== E: Contact ==== */
-
-    section#contact .container {
-        height: 160vh;
-        width: 100vw;
-        padding: 120px 20px 20px;
+    #about .container .container-title {
+        padding-top: 40px;
+        padding-bottom: 10px;
     }
 
-    section#contact .container p {
-        font-size: 0.5em;
-    }
-
-    section#contact .container .container-title {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.7em;
-    }
-
-    section#contact .container .container-title p {
-        padding: 10px;
-    }
-
-    section#contact .container .container-title p:nth-child(2) {
-        padding-left: 23%;
-        font-size: 0.3em;
-    }
-    section#contact .container .container-head {
-        display: grid;
-        margin: 40px;
-    }
-
-    section#contact .container .container-head .container-head-table {
-        font-size: 20px;
-        padding-bottom: 50px;
-    }
-
-    section#contact .container .container-head .container-head-table tr {
-        text-align: center;
-    }
-
-    section#contact .container .container-head .container-head-end {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.6em;
-    }
-
-    section#contact .container .container-head .container-head-end p {
-        padding: 10px;
-    }
-
-    section#contact .container .container-head .container-head-end p:first-child {
-        padding-left: 8.5%;
-    }
-
-    section#contact .container .container-head .container-head-end p:nth-child(2) {
-        font-size: 0.3em;
-    }
-
-    .container .container-body {
-        font-size: 25px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    .container .container-body form {
-        width: 93vw;
-        text-align: center;
-    }
-
-    .container .container-body form .input-box {
+    #about .container .container-head .container-head-table{
         display: flex;
-        justify-content: space-between;
     }
 
-    form .input-box .input-field {
-        width: 38.5%;
+    #about .container .container-head p {
+        font-size: 0.95em;
     }
 
-    .field .item {
-        width: 100%;
-        padding: 18px;
-        background: transparent;
-        border: 2px solid var(--bleu1);
-        outline: none;
-        border-radius: 6px;
-        font-size: 16px;
-        color: #ededed;
-        margin: 12px 0px;
+    #about .container .container-head table {
+        font-size: 20px;
+        padding-top: 38px;
     }
 
-    .field.error .item {
-        border-color: #d93025;
-    }
-
-    .field .item::placeholder {
-        color: rgba(255, 255, 255, 0.3);
-    }
-
-    .field .error-txt {
-        font-size: 14.5px;
-        color: #d93025;
+    #about .container .container-head table tr {
         text-align: left;
-        margin: -5px 0 10px;
-        display: none;
     }
 
-    .field.error .error-txt {
-        display: block;
+    #about .container .container-head table th,
+    #about .container .container-head table td {
+        padding: 8px 18px;
     }
 
-    form .textarea-field .item {
-        resize: none;
-    }
-
-    form .textarea-field .error-txt {
-        margin-top: -10px;
-    }
-
-    form button {
+    #about .container .container-head button {
+        margin: 10px;
         padding: 12px 32px;
-        background: var(--bleu1);
+        background: var(--blue);
         border: none;
         outline: none;
         border-radius: 6px;
-        box-shadow: 0 0 10px var(--bleu1);
+        box-shadow: 0 0 10px var(--blue);
         font-size: 16px;
         color: #333;
         letter-spacing: 1px;
@@ -218,7 +167,258 @@ section:nth-child(odd) {
         transition: .5s;
     }
 
-    form button:hover {
+    #about .container .container-head button:hover {
+        box-shadow: none;
+    }
+
+    #about .container .container-head .level {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;   
+        margin-top: 38px; 
+    }
+    #about .container .container-head .level .progress-container {
+        margin-bottom: 10px;        
+    }
+    #about .container .container-head .level .progress-container h4 {
+        margin: 0 0 10px 15px;
+        letter-spacing: .5px;        
+    }
+    #about .container .container-head .level .progress-container .progress-bar {
+        position: relative;
+        width: 500px;
+        height: 25px;
+        border-radius: 30px;
+        background-color: var(--white);
+        box-shadow: 3px 4px 5px 0px rgba(204 185 185 / .75);        
+    }
+    #about .container .container-head .level .progress-container .progress-bar span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        color: var(--white);
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: center;
+        border-radius: 30px;
+        background: linear-gradient(90deg, var(--bluegrad1) 50%, var(--bluegrad2) 100%);
+        transition: width .5s linear;
+    }
+
+    #about .container .container-body .container-body-title {
+        height: auto;
+        width: 65vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #about .container .container-body .container-body-content {
+        display: flex;
+    }
+
+    #about .container .container-body .container-body-content .content {
+        border: 2px solid grey;
+        border-radius: 20px;
+        margin: 20px 10px;
+        padding: 20px 10px;
+        width: 44.75vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: space-evenly;
+    }
+
+    #about .container .container-body .container-body-content .content span {
+        display: inline-flex;
+        margin: 20px 10px;
+    }
+
+    #about .container .container-body .container-body-content .content .dash {
+        border: 2px solid var(--black);
+        border-radius: 100%;
+        width: 10px;
+        height: 10px;
+        background-color: var(--black);
+        margin-right: 10px;
+    }
+
+    #about .container .container-body .container-body-content .content i {
+        margin-right: 5px;
+    }
+
+
+
+
+    /* ==== C: Services ==== */
+
+    /* == D: Project ==== */
+    
+    #projects .container .container-content {
+        margin: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+
+    #projects .container .container-content .project-box {
+        border: 1px solid var(--black);
+        margin: 20px;
+        height: 400px;
+        width: 300px;
+    }
+
+    #projects .container .container-content .project-box .image-box {
+        border: 1px solid var(--black);
+        height: 40%;
+        margin: 10px;
+    }
+
+    #projects .container .container-content .project-box .text-box {
+        border: 1px solid var(--black);
+        height: 45%;
+        margin: 10px;
+    }
+
+    #projects .container .container-content .project-box .mini-box {
+        position: absolute;
+        background-color: var(--black);
+        height: 35px;
+        width: 35px;
+    }
+
+    /* ==== E: Contact ==== */
+
+
+    #contact .container .container-title {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    #contact .container .container-title h2 {
+        padding: 10px;
+        color: var(--blue);
+    }
+
+    #contact .container .container-title h4 {
+        padding-left: 19%;
+    }
+
+    #contact .container .container-head {
+        display: grid;
+        margin: 40px;
+    }
+
+    #contact .container .container-head table {
+        font-size: 20px;
+        padding-bottom: 50px;
+    }
+
+    #contact .container .container-head table tr {
+        text-align: center;
+    }
+
+    #contact .container .container-head table thead tr {
+        color: var(--blue);
+    }
+
+    #contact .container .container-head .container-head-end {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contact .container .container-head .container-head-end h2 {
+        padding: 10px;
+        padding-left: 8.5%;
+        color: var(--blue);
+    }
+
+
+    #contact .container .container-body {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #contact .container .container-body form {
+        width: 93vw;
+        text-align: center;
+    }
+
+    #contact .container .container-body form .input-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #contact form .input-box .input-field {
+        width: 38.5%;
+    }
+
+    #contact .field .item {
+        width: 100%;
+        padding: 18px;
+        background: transparent;
+        border: 2px solid var(--blue);
+        outline: none;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #ededed;
+        margin: 12px 0px;
+    }
+
+    #contact .field.error .item {
+        border-color: #d93025;
+    }
+
+    #contact .field .item::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    #contact .field .error-txt {
+        font-size: 14.5px;
+        color: #d93025;
+        text-align: left;
+        margin: -5px 0 10px;
+        display: none;
+    }
+
+    #contact .field.error .error-txt {
+        display: block;
+    }
+
+    #contact form .textarea-field .item {
+        resize: none;
+    }
+
+    #contact form .textarea-field .error-txt {
+        margin-top: -10px;
+    }
+
+    #contact form button {
+        padding: 12px 32px;
+        background: var(--blue);
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        box-shadow: 0 0 10px var(--blue);
+        font-size: 16px;
+        color: #333;
+        letter-spacing: 1px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: .5s;
+    }
+
+    #contact form button:hover {
         box-shadow: none;
     }
 
@@ -239,11 +439,6 @@ section:nth-child(odd) {
     margin-left: 0;
 }
 
-/* ==== Change Theme ==== */
-
-.changeTheme {
-    cursor: pointer;
-}
 
 .nav-links ul li i {
     font-size: 1.2em;
