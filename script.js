@@ -4,7 +4,7 @@ const switchThemeBtn = document.querySelector('.changeTheme');
 const toggleDark = document.getElementById('toggleDark');
 const changeColorBtn = document.getElementById('changeColor');
 const switchColorBtn = document.querySelector("#switchColor");
-const paint = document.querySelectorAll("#switchColor i");
+const colors = document.querySelectorAll("#switchColor i");
 const spans = document.querySelectorAll('.progress-bar span');
 const form = document.querySelector('form');
 const fullName = document.getElementById("name");
@@ -35,28 +35,27 @@ const mess = document.getElementById("message");
 
         if(toggleTheme === 0) {
 
-            document.documentElement.style.setProperty('--blue', '#ff0000');
             document.documentElement.style.setProperty('--black', '#ffffff');
             document.documentElement.style.setProperty('--white', '#000000');
-            document.documentElement.style.setProperty('--bluegrad1', 'rgb(255, 0, 0, 1)');
-            document.documentElement.style.setProperty('--bluegrad2', 'rgb(245, 59, 2, 1)')
             toggleTheme++;
 
         } else {
 
-            document.documentElement.style.setProperty('--blue', '#00eeff');
             document.documentElement.style.setProperty('--black', '#000000');
             document.documentElement.style.setProperty('--white', '#ffffff');
-            document.documentElement.style.setProperty('--bluegrad1', 'rgb(0, 238, 255, 1)');
-            document.documentElement.style.setProperty('--bluegrad2', 'rgb(4, 255, 255, 1)')
             toggleTheme--;
         }
 
     })
 
-    //paint.addEventListener('click', () => {
-    //    forEach
-    //})
+    colors.forEach(color => {
+        color.addEventListener('click', () => {
+            var paint = color.style.color;
+            document.documentElement.style.setProperty('--blue', paint);
+            document.documentElement.style.setProperty('--grad2', 'dark'+paint);
+            document.documentElement.style.setProperty('--grad1', paint)
+        }) 
+    });
 
     /* ==== B: Change icon ==== */
 

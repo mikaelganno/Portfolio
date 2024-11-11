@@ -2,10 +2,10 @@
 
 :root {
     --blue: #00eeff;
-    --white: #ffffff;
+    --white: whitesmoke;
     --black: #000000;
-    --bluegrad1: rgb(0, 238, 255, 1);
-    --bluegrad2: rgb(4, 255, 255, 1);
+    --grad1: rgb(0, 238, 255, 1);
+    --grad2: rgb(4, 255, 255, 1);
     color: rgb(245, 59, 2, 1);
 }
 
@@ -29,6 +29,8 @@ body {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
+    background-color: var(--white);
+    z-index: 1000;
 }
 
 .navbar a {
@@ -105,13 +107,14 @@ section:nth-child(odd) {
 }
 
 .container {
-    height: 160vh;
+    height: auto;
     width: 100vw;
     padding: 120px 20px 20px;
 }
 
 .container h1 {
     font-size: 2.5em;
+    color: dark;
 }
 
 .container strong {
@@ -205,7 +208,7 @@ section:nth-child(odd) {
         line-height: 1.7;
         text-align: center;
         border-radius: 30px;
-        background: linear-gradient(90deg, var(--bluegrad1) 50%, var(--bluegrad2) 100%);
+        background: linear-gradient(90deg, var(--grad1) 50%, var(--grad2) 100%);
         transition: width .5s linear;
     }
 
